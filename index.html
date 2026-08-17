@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>रात यात्रा — Soulful Love Songs</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      color: white;
+
+      background:
+        linear-gradient(
+          rgba(10, 5, 25, 0.60),
+          rgba(10, 5, 25, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2000&q=85")
+        center/cover fixed no-repeat;
+    }
+
+    .overlay {
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      opacity: .85;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 60px auto 30px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 10vw, 90px);
+      font-family: Georgia, serif;
+      margin-bottom: 10px;
+      text-shadow: 0 5px 25px black;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: .9;
+      letter-spacing: 1px;
+    }
+
+    .music-card {
+      max-width: 900px;
+      margin: 45px auto;
+      padding: 25px;
+
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.20);
+      border-radius: 25px;
+
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+    }
+
+    .music-card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+
+    .spotify-player {
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 352px;
+      border: none;
+    }
+
+    .info {
+      max-width: 900px;
+      margin: 25px auto;
+      text-align: center;
+      line-height: 1.7;
+      color: rgba(255,255,255,.85);
+    }
+
+    footer {
+      max-width: 1100px;
+      margin: 70px auto 10px;
+      padding: 20px;
+      text-align: center;
+      color: rgba(255,255,255,.65);
+      font-size: 14px;
+    }
+
+    .heart {
+      color: #ff6b9a;
+    }
+
+    @media (max-width: 600px) {
+      .overlay {
+        padding: 12px;
+      }
+
+      header {
+        padding: 10px 5px;
+      }
+
+      .menu {
+        gap: 10px;
+        font-size: 13px;
+      }
+
+      .hero {
+        margin-top: 45px;
+      }
+
+      .music-card {
+        padding: 15px;
+        border-radius: 18px;
+      }
+
+      iframe {
+        height: 352px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+  <header>
+    <div class="logo">🌙 रात यात्रा</div>
+
+    <nav class="menu">
+      <a href="#home">Home</a>
+      <a href="#music">Music</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+
+  <section class="hero" id="home">
+
+    <h1>रात यात्रा</h1>
+
+    <p>
+      A peaceful journey through soulful love songs.
+    </p>
+
+  </section>
+
+
+  <section class="music-card" id="music">
+
+    <h2>🎵 Soulful Love Songs</h2>
+
+    <div class="spotify-player">
+
+
+      <iframe
+        src="https://open.spotify.com/embed/playlist/6UVtJNwk37jcY3klgmfxFZ?utm_source=generator"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </section>
+
+
+  <section class="info" id="about">
+
+    <p>
+      Put on your headphones, relax and let the music
+      take you on a peaceful night journey.
+    </p>
+
+    <p style="margin-top:12px;">
+      Music powered by Spotify.
+    </p>
+
+  </section>
+
+
+  <footer>
+    Made with <span class="heart">♥</span> for late-night listening.
+    <br><br>
+    Spotify content and playback are provided by Spotify.
+  </footer>
+
+</div>
+
+
+<script>
+
+  // Smooth scrolling for navigation
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", function(e) {
+
+      e.preventDefault();
+
+      const target =
+        document.querySelector(this.getAttribute("href"));
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+
+    });
+
+  });
+
+</script>
+
+</body>
+</html>
